@@ -29,17 +29,16 @@ class Solution {
     for (int i = 2; i <= n; i++) {
         nFactorial = nFactorial.multiply(BigInteger.valueOf(i));
     }
-                    
+    
     // Count how many 0's are on the end.
     int trailingZeroes = 0;
-    
     while (nFactorial.mod(BigInteger.TEN).equals(BigInteger.ZERO)) {
         nFactorial = nFactorial.divide(BigInteger.TEN);
         trailingZeroes++;
     }
     
     return trailingZeroes;
-    }
+   }
 }
 ```
 
