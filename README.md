@@ -18,7 +18,7 @@ Explanation: 5! = 120, one trailing zero.
 **Note: Your solution should be in logarithmic time complexity.**
 
 
-# Implementation : Naive (Time Limit Exceeded 😀)
+# Implementation 1 : Naive (Time Limit Exceeded 😀)
 ```java
 import java.math.BigInteger;
 
@@ -41,8 +41,22 @@ class Solution {
    }
 }
 ```
+# Implementation 2 : 
+```java
+class Solution {
+    public int trailingZeroes(int n) {
+        int trailingZeroes = 0;  
+        while(n >= 5) {
+            trailingZeroes += (n / 5);
+            n = n /5; 
+        }
+        return trailingZeroes;
+    }
+}
+```
 
 # References :
 1. https://www.geeksforgeeks.org/biginteger-class-in-java
 2. https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html
 3. https://leetcode.com/articles/factorial-trailing-zeroes
+4. https://www.youtube.com/watch?v=3Hdmv_Ym8PI
