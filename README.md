@@ -18,12 +18,18 @@ Explanation: 5! = 120, one trailing zero.
 **Note: Your solution should be in logarithmic time complexity.**
 
 ## Approach :
-Lets see some examples
+Lets see some examples :
+
 5! = 1 * 2 * 3 * 4 * 5 = 1 trailing zero
+
 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 1 trailing zero
+
 10! = 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10 = 2 trailing zeroes
+
 15! = 1 * ... * 5 * .... * 10 * ... * 15 = 3 trailing zeroes
+
 20! = 1 * ... * 5 * .... * 10 * ... * 15 * ... * 20 = 4 trailing zeroes
+
 25! = 1 * ... * 5 * .... * 10 * ... * 15 * ... * 20 * .... * 25 = 6 trailing zeroes (25 = 5 * 5)
 
 So basically we have to count how many times 5 will come, while calculating factorial of a number.
